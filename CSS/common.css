@@ -1,0 +1,152 @@
+.container {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+ .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0); /* 初始透明背景 */
+    transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+.header-wrapper.scrolled {
+    background-color: white; /* 滚动后背景变白 */
+}
+
+.header {
+    width: 100%;
+    height: 52px;
+    color: white; /* 初始字体颜色为白色 */
+    transition: color 0.3s; /* 添加字体颜色过渡效果 */
+}
+
+.header-wrapper.scrolled .header {
+    color: black; /* 滚动后字体变黑 */
+}
+
+.header-wrapper:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+ .logo{
+    float:left;
+    margin-left: 40px;
+    height: 52px;
+}
+
+.nav{
+    float: right;
+    margin-right: 34px;
+    height: 30px;
+}
+
+
+.header .nav ul{
+    float:right;
+}
+
+.header .nav li{
+    position: relative;
+    float: left;
+    line-height: 52px;
+}
+
+.header .nav a{
+    padding: 0 16px;
+    border-right: 1px solid currentColor;
+    font-size: 26px;
+    color: inherit; /* 让字体颜色根据父元素的颜色变化 */
+} 
+
+.header .nav li:last-child a {
+    border-right: none; /* 去掉最后一个链接的右边框 */
+}
+
+.dropdown {
+    display: none; /* 默认隐藏下拉菜单 */
+    position: absolute; /* 绝对定位 */
+    background-color: rgba(128, 128, 128, 0); /* 半透明灰色背景 */
+    padding: 0; /* 移除内边距 */
+    border-radius: 4px; /* 圆角 */
+}
+
+.dropdown ul {
+    list-style: none; /* 移除列表样式 */
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
+}
+
+.dropdown li {
+    display: block;
+    line-height: 40px;
+    /* width: auto; */
+    white-space: nowrap; /* 防止换行 */
+
+}
+
+
+.header .nav li .dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 18px;
+    border-left: 1px solid #ffffff;
+    border-right: none;
+    background-color: rgba(255, 255, 255, 0); /* 默认背景色 */
+    transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+}
+
+/* 下拉菜单链接悬停样式 */
+.header .nav li .dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* 悬停时背景色 */
+    color: white; /* 悬停时字体变为纯白色 */
+    border-left: 1px solid #000000;
+}
+
+/* 鼠标悬停时显示下拉菜单 */
+.nav li:hover .dropdown {
+    display: block; /* 显示下拉菜单 */
+}
+
+
+.header .nav li .dropdown a.scrolled {
+    background-color: rgba(255, 255, 255, 1); /* 滚动时背景色变化 */
+    color: black; /* 滚动时字体颜色变化 */
+    border-left: 1px solid #000000;
+}
+
+
+.header .nav li .dropdown a.scrolled:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* 悬停时背景色变化 */
+    color: black; /* 悬停时字体颜色变化 */
+}
+
+.dropdown a {
+    pointer-events: auto; /* 允许悬停状态 */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
